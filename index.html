@@ -219,15 +219,60 @@ header nav a:not(.btn){padding:12px 8px}
 .fcols a{padding:11px 0;min-height:44px}
 .hero .logo{height:auto}
 .drawer{gap:0}
+
+.shop{background:#FFD800;color:#000;--ink:#000;--mut:#2b2b2b;--line:rgba(0,0,0,.22)}
+.shop h2{color:#000}
+.shop .kick{display:inline-block;background:#000;color:#FFD800;padding:2px 12px;border-radius:4px}
+.shop :focus-visible{outline-color:#000}
+.shop .pc :focus-visible{outline-color:#FFD800}
+.shopg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1000px){.shopg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.shopg{grid-template-columns:1fr}}
+.pc{position:relative;background:#000;color:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 0 rgba(0,0,0,.35);transition:transform .3s}
+.pc:hover{transform:translateY(-4px)}
+.pc img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}
+.pb{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 16px 20px;text-align:center}
+.pb h3{font:400 1.55rem/1.1 'Bebas Neue',Impact,sans-serif;letter-spacing:.04em;color:#FFD800}
+.pb p{flex:1;font-size:.9rem;line-height:1.45;color:#d6d6d6}
+.pr{font:400 2.1rem/1 'Bebas Neue',Impact,sans-serif;letter-spacing:.03em}
+.pr small{font:400 .85rem Lato,system-ui,sans-serif;color:#bdbdbd;letter-spacing:0}
+.pc .btn{width:100%;text-align:center}
+.off{position:absolute;top:12px;left:12px;z-index:1;background:#FFD800;color:#000;padding:4px 14px;border-radius:30px;font:400 1.05rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.06em}
+.slot{border:2px dashed rgba(0,0,0,.35);border-radius:16px;min-height:280px;display:grid;place-items:center;font:400 1.5rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,0,0,.45)}
+.sold{width:max-content;max-width:100%;margin:34px auto 0;padding:10px 22px;border-radius:40px;background:#000;color:#FFD800;font:400 1.1rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.08em;text-align:center}
+.cart{max-width:640px;margin:34px auto 0;padding:28px 26px;background:#fff;border-radius:16px;box-shadow:0 3px 0 rgba(0,0,0,.35);text-align:center;color:#000}
+.cart :focus-visible{outline-color:#000}
+.cart h3{font:400 1.8rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.05em;margin-bottom:14px}
+.ce{color:#4d4d4d;margin-bottom:6px}
+.cl{list-style:none;padding:0;margin:0 0 6px;text-align:left}
+.cl li{display:grid;grid-template-columns:1fr auto auto;gap:8px 14px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.14)}
+.cl .nm{font-weight:700;font-size:.95rem;line-height:1.3}
+.cl .st{display:flex;align-items:center}
+.cl .st button{width:44px;height:44px;border:1.5px solid #000;border-radius:50%;background:#fff;color:#000;font:400 1.4rem/1 Lato,system-ui,sans-serif;cursor:pointer}
+.cl .st button:hover{background:#FFD800}
+.cl .st span{min-width:34px;text-align:center;font-weight:700}
+.cl .sub{font:400 1.25rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.03em;min-width:92px;text-align:right}
+.cl .rm{grid-column:1/-1;justify-self:start;background:none;border:0;padding:6px 0;min-height:44px;color:#4d4d4d;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
+.tot{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0 6px;font:400 1.4rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.05em}
+.tot b{font:400 2rem 'Bebas Neue',Impact,sans-serif}
+.age{display:flex;gap:10px;align-items:center;justify-content:center;min-height:44px;margin:8px 0 12px;cursor:pointer}
+.age input{width:22px;height:22px;margin:0;accent-color:#000}
+#chk{width:100%;text-align:center}
+#chk[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.cm{min-height:1.4em;margin-top:10px;color:#b00020;font-size:.9rem}
+.fine{margin-top:6px;font-size:.8rem;line-height:1.5;color:#4d4d4d}
+.cf{display:none;position:fixed;left:18px;bottom:calc(18px + var(--safe-b));z-index:30;align-items:center;gap:6px;min-height:50px;padding:0 20px;border-radius:40px;background:#000;color:#FFD800;border:2px solid #FFD800;font:400 1rem 'Bebas Neue',Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.cf.on{display:flex}.cf.hide{display:none!important}
+@media(max-width:420px){.cf{padding:0 14px;font-size:.9rem}}
 </style>
 </head>
 <body>
 <a class="skip" href="#topo">Pular para o conteúdo</a>
 <header id="hd"><div class="wrap"><a href="#topo"><img src="img/logo-240.webp" width="59" height="40" alt="Kapitän Klaus Cervejaria"></a>
-<nav><a href="#chopes">Chopes</a><a href="#eventos">Eventos</a><a href="#parceiros">Parceiros</a><a href="#localizacao">Localização</a><a class="btn" href="#contato" style="padding:11px 22px">Orçamento</a></nav><button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="dr"><i></i><i></i><i></i></button></div></header>
+<nav><a href="#chopes">Chopes</a><a href="#loja">Loja</a><a href="#eventos">Eventos</a><a href="#parceiros">Parceiros</a><a href="#localizacao">Localização</a><a class="btn" href="#contato" style="padding:11px 22px">Orçamento</a></nav><button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="dr"><i></i><i></i><i></i></button></div></header>
 <div class="scrim" id="sc"></div>
 <div class="drawer" id="dr" role="dialog" aria-modal="true" aria-label="Menu principal" aria-hidden="true"><button class="x" id="dx" aria-label="Fechar menu">×</button><img class="dlogo" src="img/logo-240.webp" width="120" height="82" alt="Kapitän Klaus Cervejaria">
-<div class="dl"><a href="#chopes">Chopes</a><a href="#eventos">Eventos</a><a href="#parceiros">Parceiros</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a></div>
+<div class="dl"><a href="#chopes">Chopes</a><a href="#loja">Loja</a><a href="#eventos">Eventos</a><a href="#parceiros">Parceiros</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a></div>
 <a class="btn dcta" href="https://wa.me/553129423090?text=Ol%C3%A1%2C%20Klaus%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
 
 <main id="topo" tabindex="-1">
@@ -247,6 +292,36 @@ header nav a:not(.btn){padding:12px 8px}
 <div class="card ph p2 rv"><div class="clogo" role="img" aria-label="Kapitän Klaus Cervejaria"></div><h3>Receitas exclusivas</h3><p>Rótulos autorais criados pela cervejaria, com identidade própria.</p></div>
 <div class="card ph p3 rv"><div class="clogo" role="img" aria-label="Kapitän Klaus Cervejaria"></div><h3>Edições sazonais</h3><p>Lançamentos por tempo limitado para surpreender quem já é de casa.</p></div>
 </div></div></section>
+
+<section id="loja" class="shop"><div class="wrap">
+<div class="kick rv">Loja</div><h2 class="rv">Peça suas latas pelo WhatsApp</h2>
+<p class="lead rv">Escolha suas cervejas, monte o carrinho e finalize a compra direto no WhatsApp da Klaus.</p>
+<div class="shopg">
+<article class="pc rv" data-id="bloody-mary" data-name="Bloody Mary Red Lager Puro Malte 473ml" data-price="1299">
+<img src="img/loja-bloody-mary.webp" width="720" height="480" alt="Latas de Bloody Mary Red Lager Puro Malte, 473 ml, com ilustração de zumbi em um espelho" loading="lazy" decoding="async">
+<div class="pb"><h3>Bloody Mary Red Lager</h3><p>Cerveja puro malte, lata de 473 ml.</p><div class="pr">R$ 12,99 <small>a lata</small></div>
+<button class="btn add" type="button">Adicionar ao carrinho</button></div></article>
+<article class="pc rv" data-id="combo-apa-ipa" data-name="Combo APA e IPA (5x American Western + 5x Hop Holic’s)" data-price="15990"><span class="off">20% OFF</span>
+<img src="img/loja-combo-apa-ipa.webp" width="720" height="480" alt="Combo com 5 latas American Western APA e 5 latas Hop Holic’s American IPA" loading="lazy" decoding="async">
+<div class="pb"><h3>Combo APA e IPA</h3><p>5x APA (American Western) + 5x IPA (Hop Holic’s) = 10 unidades.</p><div class="pr">R$ 159,90 <small>10 unidades</small></div>
+<button class="btn add" type="button">Adicionar ao carrinho</button></div></article>
+<article class="pc rv" data-id="american-western" data-name="American Western APA Puro Malte 473ml" data-price="1499">
+<img src="img/loja-american-western.webp" width="720" height="480" alt="Latas de American Western American Pale Ale em cenário do Velho Oeste" loading="lazy" decoding="async">
+<div class="pb"><h3>American Western APA</h3><p>American Pale Ale puro malte, lata de 473 ml.</p><div class="pr">R$ 14,99 <small>a lata</small></div>
+<button class="btn add" type="button">Adicionar ao carrinho</button></div></article>
+<!-- ESPAÇO RESERVADO: para incluir mais uma cerveja, troque este bloco por um <article class="pc"> igual aos acima -->
+<div class="slot rv" aria-hidden="true">Em breve</div>
+</div>
+<p class="sold rv">Os produtos são vendidos e enviados por Cervejaria Klaus</p>
+<div class="cart rv" id="carrinho"><h3>Seu carrinho</h3>
+<p class="ce" id="ce">Seu carrinho está vazio. Adicione uma cerveja acima.</p>
+<ul class="cl" id="cl"></ul>
+<div class="tot"><span>Total</span><b id="ct">R$ 0,00</b></div>
+<label class="age"><input type="checkbox" id="age"> Tenho 18 anos ou mais</label>
+<a class="btn" id="chk" href="#carrinho" target="_blank" rel="noopener" aria-disabled="true">Finalizar compra no WhatsApp</a>
+<p class="cm" id="cm" role="status"></p>
+<p class="fine">Frete e pagamento são combinados no atendimento pelo WhatsApp. Venda proibida para menores de 18 anos. Beba com moderação.</p></div>
+</div></section>
 
 <section id="eventos"><div class="wrap">
 <div class="kick rv">Chopp para eventos</div><h2 class="rv">Chopeira na sua festa, sem complicação</h2>
@@ -310,6 +385,7 @@ header nav a:not(.btn){padding:12px 8px}
 <div><b>E-mail</b><a href="mailto:atendimento@cervejariaklaus.com.br">atendimento@cervejariaklaus.com.br</a></div>
 <div><b>Redes</b><a href="https://instagram.com/cervejariaklaus" target="_blank" rel="noopener">@cervejariaklaus</a></div></div>
 <div class="copy">© 2026 Kapitän Klaus Cervejaria · Beba com moderação. Venda proibida para menores de 18 anos.</div></div></footer>
+<a class="cf" id="cf" href="#carrinho">Carrinho · <b id="cn">0</b> · <span id="cv">R$ 0,00</span></a>
 <a class="fab" id="fab" href="https://wa.me/553129423090?text=Ol%C3%A1%2C%20Klaus%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 <script>
@@ -340,6 +416,26 @@ if(hv){hv.muted=true;hv.defaultMuted=true;
 const red=matchMedia('(prefers-reduced-motion: reduce)').matches,sd=navigator.connection&&navigator.connection.saveData;
 if(!red&&!sd){hv.src=innerWidth<=760?'video/hero-mobile.mp4':'video/hero.mp4';hv.preload='auto';
 new IntersectionObserver(e=>{if(e[0].isIntersecting){const r=hv.play();if(r&&r.catch)r.catch(()=>{})}else hv.pause()}).observe(hv)}}
+
+const PR={};document.querySelectorAll('.pc[data-id]').forEach(e=>{PR[e.dataset.id]={n:e.dataset.name,p:+e.dataset.price}});
+let C={};try{C=JSON.parse(localStorage.getItem('klaus-cart')||'{}')}catch(e){}
+Object.keys(C).forEach(k=>{if(!PR[k]||!(C[k]>0))delete C[k]});
+const brl=c=>(c/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}).replace(/\u00a0/g,' ');
+const $=id=>document.getElementById(id),cl=$('cl'),chk=$('chk'),age=$('age'),cm=$('cm'),cf=$('cf');
+function draw(){const ids=Object.keys(C);let n=0,t=0;
+cl.innerHTML=ids.map(k=>{const q=C[k],s=PR[k].p*q;n+=q;t+=s;return `<li data-id="${k}"><span class="nm">${PR[k].n}</span><span class="st"><button type="button" data-a="-" aria-label="Diminuir quantidade">−</button><span aria-live="polite">${q}</span><button type="button" data-a="+" aria-label="Aumentar quantidade">+</button></span><span class="sub">${brl(s)}</span><button type="button" class="rm" data-a="x">Remover</button></li>`}).join('');
+$('ce').hidden=n>0;$('ct').textContent=brl(t);$('cn').textContent=n;$('cv').textContent=brl(t);cf.classList.toggle('on',n>0);
+const L=ids.map(k=>`${C[k]}x ${PR[k].n} — ${brl(PR[k].p*C[k])}`).join('\n');
+const msg=`Olá, Klaus! Gostaria de fazer este pedido:\n\n${L}\n\nTotal: ${brl(t)}\nTenho 18 anos ou mais. Pode me informar o frete e as formas de pagamento?`;
+chk.href=n&&age.checked?`https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`:'#carrinho';
+chk.setAttribute('aria-disabled',n&&age.checked?'false':'true');
+try{localStorage.setItem('klaus-cart',JSON.stringify(C))}catch(e){}}
+document.querySelectorAll('.pc .add').forEach(b=>b.addEventListener('click',()=>{const k=b.closest('.pc').dataset.id;C[k]=(C[k]||0)+1;cm.textContent='';draw();const o=b.textContent;b.textContent='Adicionado ✓';setTimeout(()=>b.textContent=o,1200)}));
+cl.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;const k=b.closest('li').dataset.id,a=b.dataset.a;if(a==='+')C[k]++;else if(a==='-'){C[k]--;if(C[k]<1)delete C[k]}else delete C[k];draw()});
+age.addEventListener('change',()=>{cm.textContent='';draw()});
+chk.addEventListener('click',e=>{if(chk.getAttribute('aria-disabled')==='true'){e.preventDefault();cm.textContent=Object.keys(C).length?'Confirme que você tem 18 anos ou mais para continuar.':'Adicione ao menos uma cerveja ao carrinho.'}});
+new IntersectionObserver(e=>cf.classList.toggle('hide',e[0].isIntersecting)).observe($('carrinho'));
+draw();
 </script>
 </body>
 </html>
